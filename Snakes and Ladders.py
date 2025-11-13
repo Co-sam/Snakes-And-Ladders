@@ -1,7 +1,10 @@
-import random
+'''Snakes-And-Ladders
+Snakes and Ladders is one of the most famous board games in the world and is really encouraged for young children to learn counting. 
+So, I created a new program that is very similar to the game's system. You can view my code below.
+import random'''
 # snakes[0] = head , snakes[1] = tail
 # ladder[0] = bottom, ladder[1] = top
-
+import random
 snakes = [
     (39, 21),
     (70, 53),
@@ -20,6 +23,12 @@ print('Welcome to game of snakes and ladders!!!')
 print('This is a two player game which mainly focuses on luck, so GOOD LUCK!!!!')
 
 print('Before you start the game, please decide who is player 1 and who is player 2 with your partner.')
+print("Each set represents the position of the snakes, the first number is the position of a snake's head and the second number if the position of a snake's tail.")
+for snake_position in snakes:
+    print('->',snake_position)
+print("Each set represents the position of the ladders, the first number is the position of a laddder's bottom and the second number in each set is the position of the ladder's top.")
+for ladder_position in ladders:
+    print('->',ladder_position)
 
 def check_snakes_and_ladders(position, snakes, ladders):
     global state
@@ -44,6 +53,7 @@ while count != 100:
     player_1 += x
     print('The number you got is:', x)
     print("Player 1, your current position right now is: ",player_1 )
+
     check_snakes_and_ladders(player_1 ,snakes, ladders)
     player_1  = state
 
